@@ -618,6 +618,7 @@ const Overview = observer(({ item, data, series }) => {
   const MIN_OVERVIEW = 10;
 
   function brushed() {
+    // scrolling through axis
     if (d3.event.selection && !checkD3EventLoop("brush") && !checkD3EventLoop("wheel")) {
       let [x1, x2] = d3.event.selection;
       const prev = prevBrush.current;
@@ -652,6 +653,7 @@ const Overview = observer(({ item, data, series }) => {
   }
 
   function brushended() {
+    // timeline interaction, shift selection
     if (!d3.event.selection) {
       // move selection on click; try to preserve it's width
       const center = d3.mouse(this)[0];

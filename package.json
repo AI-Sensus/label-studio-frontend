@@ -12,17 +12,17 @@
     "type": "git",
     "url": "https://github.com/heartexlabs/label-studio-frontend.git"
   },
-  "browser": "build/static/js/main.js",
-  "main": "build/static/js/main.js",
+  "browser": "../label-studio/label_studio/frontend/dist/lsf/js/main.js",
+  "main": "../label-studio/label_studio/frontend/dist/lsf/js/main.js",
   "files": [
-    "build/",
+    "../label-studio/label_studio/frontend/dist/lsf/",
     "images/",
     "CODE_OF_CONDUCT.md",
     "CONTRIBUTING.md"
   ],
   "size-limit": [
     {
-      "path": "build/static/js/*.js"
+      "path": "../label-studio/label_studio/frontend/dist/lsf/js/*.js"
     }
   ],
   "scripts": {
@@ -31,7 +31,7 @@
     "build:final": "BUILD_NO_CHUNKS=true yarn run build",
     "build:no-hash": "BUILD_NO_HASH=true BUILD_NO_CHUNKS=true yarn run build",
     "build:module": "BUILD_MODULE=true yarn run build:no-hash",
-    "build": "webpack",
+    "build": "webpack --output-path ../label-studio/label_studio/frontend/dist/lsf/js",
     "watch": "webpack --watch",
     "copy-examples": "bash scripts/copy.sh",
     "eject": "react-scripts eject",
@@ -191,7 +191,7 @@
     "mobx-react": "^6",
     "mobx-state-tree": "^3.16.0",
     "nanoid": "^3.3.0",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^3.2.10",
     "node-sass": "^6.0.1",
     "pleasejs": "^0.4.2",
     "postcss": "^8.4.6",
