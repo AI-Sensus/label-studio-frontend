@@ -32,7 +32,7 @@
     "build:no-hash": "BUILD_NO_HASH=true BUILD_NO_CHUNKS=true yarn run build",
     "build:module": "BUILD_MODULE=true yarn run build:no-hash",
     "build": "webpack --output-path ../label-studio/label_studio/frontend/dist/lsf/js",
-    "watch": "webpack --watch",
+    "watch": "webpack --output-path ../label-studio/label_studio/frontend/dist/lsf/js --watch",
     "copy-examples": "bash scripts/copy.sh",
     "eject": "react-scripts eject",
     "docs:generate": "node scripts/create-docs.js",
